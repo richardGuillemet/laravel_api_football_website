@@ -15,7 +15,6 @@ return new class extends Migration
     {
         Schema::create('players', function (Blueprint $table) {
             $table->id();
-            $table->timestamps();
             $table->string('prenom', 64);
             $table->string('nom', 64);
             $table->date('date_naissance');
@@ -25,6 +24,7 @@ return new class extends Migration
             $table->string('photo', 64);
             $table->unsignedBigInteger('club_id');
             $table->foreign('club_id')->references('id')->on('teams');
+            $table->timestamps();
         });
     }
 
