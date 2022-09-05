@@ -19,6 +19,7 @@ return new class extends Migration
             $table->string('logo', 64);
             $table->text('presentation');
             $table->integer('indice_uefa');
+            $table->text('pays');
             $table->timestamps();
         });
     }
