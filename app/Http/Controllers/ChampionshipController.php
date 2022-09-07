@@ -14,12 +14,11 @@ class ChampionshipController extends Controller
     public function browse()
     {
         //return response()->json([Championship::all()]);
-        return response()->json(Championship::all());
+        return Championship::all();
     }
 
     public function read($id)
     {
-        dump($id);
-        return response()->json(Championship::find($id));
+        return Championship::find($id);
     }
 }
