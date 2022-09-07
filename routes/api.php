@@ -3,6 +3,7 @@
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ChampionshipController;
+use App\Http\Controllers\PlayerController;
 use App\Http\Controllers\TeamController;
 
 /*
@@ -33,6 +34,9 @@ Route::get('equipes', [TeamController::class, 'browse']);
 // Liste d'une équipe
 Route::get('equipe/{id}', [TeamController::class, 'read']);
 
+
 // Liste de tous les joueurs
+Route::get('joueurs', [PlayerController::class, 'browse']);
 
 // Liste d'un joueur
+Route::get('joueur/{id}', [PlayerController::class, 'read']);
